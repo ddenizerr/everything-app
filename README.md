@@ -8,6 +8,7 @@ Manage your day, boost your mood, and keep your data safe, all in one beautiful,
 ## ℹ️ About
 
 This app was created as a **JavaScript refresher** project — a fun way to revisit core concepts, DOM manipulation, and modular code organization while building something useful and visually appealing.
+
 ---
 
 ## ✨ Features
