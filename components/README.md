@@ -50,7 +50,7 @@ This app was created as a **JavaScript refresher** project — a fun way to revi
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure 
 
 ```
 everything-app/
