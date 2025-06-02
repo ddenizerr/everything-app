@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everything App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#1c1b18] text-[#f6e05e] font-sans tracking-wide">
+    <h1
+      class="text-4xl font-black text-center text-[#f6e05e] my-8 uppercase tracking-widest drop-shadow-lg"
+    >
+      🧠 Everything App
+    </h1>
+    <div
+      class="flex flex-col items-center justify-center min-h-screen px-4 py-6"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+        <!-- Counter Section -->
+        <section
+          id="counter-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            🔢 Counter
+          </h2>
+          <div id="counter" class="flex items-center gap-4">
+            <button
+              id="decrement"
+              class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              -
+            </button>
+            <span id="count" class="text-xl font-mono text-[#f6e05e]">0</span>
+            <button
+              id="increment"
+              class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              +
+            </button>
+            <button
+              id="reset"
+              class="ml-4 bg-[#3d3d33] hover:bg-[#ff3b3b] px-3 py-2 rounded text-[#f6e05e] shadow-md"
+            >
+              Reset
+            </button>
+          </div>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section
+          id="todo-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            📝 To-Do List
+          </h2>
+          <div class="flex gap-2 mb-4">
+            <input
+              type="text"
+              id="todo-input"
+              placeholder="Add task..."
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] rounded px-3 py-2 flex-1 placeholder-gray-500"
+            />
+            <button
+              id="add-todo"
+              class="bg-[#ff3b3b] hover:bg-[#ff3b3b] text-white px-4 py-2 rounded shadow-md"
+            >
+              Add
+            </button>
+          </div>
+          <ul id="todo-list" class="list-disc pl-5 text-[#f6e05e] space-y-1">
+            <!-- To-Do items will be dynamically added here -->
+          </ul>
+          <button
+            id="clear-todo-list"
+            class="mt-4 bg-[#3d3d33] hover:bg-[#ff3b3b] text-[#f6e05e] px-4 py-2 rounded shadow-md"
+          >
+            Clear List
+          </button>
+        </section>
+
+        <!-- Quote Generator Section -->
+        <section
+          id="quote-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border border-[#c4b26e] hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            💬 Quote Generator
+          </h2>
+          <blockquote
+            id="quote"
+            class="italic text-[#e2d5a1] mb-4 border-l-4 border-[#c4b26e] pl-4"
+          >
+            Click the button to get a quote.
+          </blockquote>
+          <button
+            id="get-quote"
+            class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+          >
+            New Quote
+          </button>
+        </section>
+
+        <!-- Joke Generator Section -->
+        <section
+          id="joke-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border border-[#c4b26e] hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            💬 Joke Generator
+          </h2>
+          <blockquote
+            id="joke"
+            class="italic text-[#e2d5a1] mb-4 border-l-4 border-[#c4b26e] pl-4"
+          >
+            Click the button to get a joke.
+          </blockquote>
+          <button
+            id="get-joke"
+            class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+          >
+            Get A Joke
+          </button>
+        </section>
+
+        <!-- Score Tracker Section -->
+        <section
+          id="score-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border border-[#c4b26e] hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            🏫 Score Tracker
+          </h2>
+          <div class="flex gap-4 items-center mb-4">
+            <input
+              type="text"
+              id="student-name"
+              placeholder="Enter student name"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            />
+            <button
+              id="create-tracker"
+              class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Start Tracking
+            </button>
+          </div>
+          <div id="tracker-controls" class="hidden flex gap-4 items-center">
+            <button
+              id="increase-score"
+              class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Increase
+            </button>
+            <button
+              id="decrease-score"
+              class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Decrease
+            </button>
+            <span id="score-display" class="text-xl font-mono text-[#f6e05e]"
+              >Score: 0</span
+            >
+          </div>
+        </section>
+
+        <!-- Password Vault Section -->
+        <section
+          id="vault-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border border-[#c4b26e] hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            🔐 Password Vault
+          </h2>
+          <div class="flex gap-4 items-center mb-4">
+            <input
+              type="text"
+              id="vault-key-email"
+              placeholder="Key (e.g. Email)"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            />
+            <input
+              type="password"
+              id="vault-password"
+              placeholder="Password"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            />
+            <button
+              id="save-password"
+              class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Save
+            </button>
+          </div>
+          <div class="flex gap-4 items-center mb-4">
+            <input
+              type="text"
+              id="vault-key"
+              placeholder="Key to retrieve"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            />
+            <button
+              id="retrieve-password"
+              class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Retrieve
+            </button>
+          </div>
+          <p id="vault-output" class="text-[#f6e05e] italic">asdfaf</p>
+        </section>
+
+        <!-- Bank Account Section -->
+        <section
+          id="bank-account-section"
+          class="bg-[#2a2a23] shadow-xl rounded-lg p-6 border border-[#c4b26e] hover:border-[#ff3b3b] transition-all"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-[#f6e05e] uppercase tracking-wider"
+          >
+            🏦 Bank Account
+          </h2>
+          <div class="flex flex-col gap-4 mb-4">
+            <input
+              type="text"
+              id="bank-owner"
+              placeholder="Owner Name"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            />
+            <select
+              id="account-type"
+              class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500"
+            >
+              <option value="" disabled selected>Select Account Type</option>
+              <option value="checking">Checking</option>
+              <option value="savings">Savings</option>
+              <option value="investment">Investment</option>
+            </select>
+            <button
+              id="create-account"
+              class="bg-[#f6e05e] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+            >
+              Create Account
+            </button>
+          </div>
+          <div id="bank-controls" class="hidden flex flex-col gap-4">
+            <div class="flex gap-2">
+              <input
+                type="number"
+                id="transaction-amount"
+                placeholder="Amount"
+                class="bg-[#1c1b18] border border-[#4a4a3f] text-[#f6e05e] px-3 py-2 rounded placeholder-gray-500 w-full"
+              />
+            </div>
+            <div class="flex gap-4">
+              <button
+                id="deposit"
+                class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+              >
+                Deposit
+              </button>
+              <button
+                id="withdraw"
+                class="bg-[#7a9449] hover:bg-[#ff3b3b] text-black px-4 py-2 rounded shadow-md"
+              >
+                Withdraw
+              </button>
+              <button
+                id="show-balance"
+                class="bg-[#3d3d33] hover:bg-[#ff3b3b] text-[#f6e05e] px-4 py-2 rounded shadow-md"
+              >
+                Show Balance
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="./components/quotes.js"></script>
+    <script src="./components/counter.js"></script>
+    <script src="./components/todo.js"></script>
+    <script src="./components/jokes.js"></script>
+    <script src="./components/score.js"></script>
+    <script src="./components/password-vault.js"></script>
+    <script src="./components/bank-account.js"></script>
+  </body>
+</html>
